@@ -24,7 +24,7 @@ function App() {
                     <Route path={Paths.BREAD} element={<Bread/>}/>
                     <Route path={Paths.DAIRY} element={<Dairy/>}/>
                 </Route>
-                <Route path={Paths.ERROR} element={<ErrorPage/>}/>
+                <Route path={"*"} element={<ErrorPage/>}/>
             </Route>
         </Routes>
     )
