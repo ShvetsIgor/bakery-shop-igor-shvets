@@ -6,5 +6,7 @@ export enum Paths {
     CART = 'cart',
     BREAD = 'bread',
     DAIRY = 'dairy',
-    ERROR = 'error'
+    ERROR = 'error',
+    LOGIN = 'login',
+    LOGOUT = 'logout'
 }
