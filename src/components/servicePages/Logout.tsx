@@ -1,25 +1,13 @@
-import {useNavigate} from "react-router-dom";
-import {useAppDispatch} from "../../redux/hooks.ts";
-import {resetAuthUser} from "../../redux/slices/authSlice.ts";
 import Button from '@mui/material/Button';
-
+import {useLogout} from "../../utils/constants.ts";
 
 const Logout = () => {
 
-    const navigate = useNavigate();
-    const dispatch = useAppDispatch();
-
-
-    const handleLogout = () => {
-        localStorage.removeItem("email");
-        localStorage.removeItem("password");
-        dispatch(resetAuthUser());
-        navigate('/login');
-    }
+    const logout = useLogout(); //my hook in constants.ts
 
     return (
         <div>
-            <Button variant="outlined" onClick={handleLogout}>Logout</Button>
+            <Button variant="outlined" onClick={logout}>Logout</Button>
         </div>
     );
 };
